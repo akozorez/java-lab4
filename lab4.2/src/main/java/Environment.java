@@ -4,6 +4,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.util.Arrays;
 import java.util.List;
+import java.nio.file.Paths;
 
 public class Environment {
     private WebDriver webDriver = null;
@@ -16,7 +17,7 @@ public class Environment {
 
     public Environment(){
         this.property = "webdriver.chrome.driver";
-        this.path = "C:\\Users\\kenshinn\\Desktop\\lab4.2\\src\\main\\resources\\chrome-driver.exe";
+        this.path = Paths.get(".").toAbsolutePath().normalize().toString() + "\\lab4.2\\src\\main\\resources\\chrome-driver.exe";
     }
 
     private WebDriver initDriver() {
