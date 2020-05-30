@@ -11,7 +11,7 @@ public class Task2 {
 
         driver.get(apiUrl);
 
-        String xPath = "//*[@id=\"list_form1\"]//div[1]//*[contains(concat(\" \",normalize-space(@class),\" \"),\" conf-div-short \")]//table//tbody//tr[15]//td[11]//a//span//span[2]";
+        String xPath = "//*[@id=\"list_form1\"]//div[1]//*[contains(concat(\" \",normalize-space(@class),\" \"),\" conf-div-short \")]//table//tbody//tr[last()]//td[last()]//a//span//span[last()]";
 
         String result = Utility.getElementFromPageBy(driver, "xpath", xPath);
         System.out.println(result);
